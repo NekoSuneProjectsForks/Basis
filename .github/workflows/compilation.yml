@@ -67,6 +67,7 @@ jobs:
         timeout-minutes: 2
         uses: actions/upload-artifact@v4
         with:
+          retention-days: 1
           name: Basis-Client-${{ matrix.targetPlatform }}
           path: |
             build
@@ -75,6 +76,7 @@ jobs:
         timeout-minutes: 4
         uses: actions/upload-artifact@v4
         with:
+          retention-days: 1
           name: Basis-Symbols-Client-${{ matrix.targetPlatform }}
           path: |
             "**/${{ matrix.targetPlatform }}_BackUpThisFolder_ButDontShipItWithYourGame"
@@ -109,6 +111,7 @@ jobs:
         timeout-minutes: 2
         uses: actions/upload-artifact@v4
         with:
+          retention-days: 1
           name: Basis-Server-${{ matrix.targetPlatform }}
           path: "build"
 
